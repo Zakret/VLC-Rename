@@ -72,8 +72,8 @@ function restoreItem(id, uri)
 	else
 		item.path = "file://" .. uri
 	end
-	vlc.playlist.add({item})
-	vlc.playlist.move(vlc.playlist.current(), id) --does not work
+	vlc.playlist.enqueue({item})
+	-- vlc.playlist.move(vlc.playlist.current(), id) --does not work
 	vlc.deactivate()
 end
 
